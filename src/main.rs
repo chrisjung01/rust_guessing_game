@@ -21,7 +21,7 @@ fn main() {
         let mut guess = String::new();
         stdin().read_line(&mut guess).expect("Can not read input");
 
-        // this will start the for loop again if this will fail
+        // this will start the for loop again, if parse to int failed for some reason
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
@@ -31,8 +31,7 @@ fn main() {
         match guess.cmp(&secret) {
             std::cmp::Ordering::Less => println!("Too small!"),
             std::cmp::Ordering::Equal => {
-                println!("You won!");
-                println!("You need {try_counter} tries");
+                println!("You won! Need {try_counter} tries");
                 break;
             }
             std::cmp::Ordering::Greater => println!("Too big!"),
