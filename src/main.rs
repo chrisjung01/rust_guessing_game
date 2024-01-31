@@ -11,9 +11,6 @@ fn main() {
     // create random nummer
     let secret: u32 = rand::thread_rng().gen_range(0..=100);
 
-    // todo remove this println
-    // println!("The secret Number is: {secret}");
-
     loop {
         // update try_counter
         try_counter += 1;
@@ -23,10 +20,6 @@ fn main() {
         println!("Please input your guess(1-100):");
         let mut guess = String::new();
         stdin().read_line(&mut guess).expect("Can not read input");
-
-        // parse string to Number
-        // this can not handle invalid inputs well
-        // let guess: u32 = guess.trim().parse().expect("Please type a Number");
 
         // this will start the for loop again if this will fail
         let guess: u32 = match guess.trim().parse() {
