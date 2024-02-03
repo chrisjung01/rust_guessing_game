@@ -1,5 +1,5 @@
 use rand::Rng;
-use std::io::{stdin, stdout, Write};
+use std::io::stdin;
 
 fn main() {
     let version = "0.0.4";
