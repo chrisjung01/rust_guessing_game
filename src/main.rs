@@ -2,7 +2,7 @@ use rand::Rng;
 use std::io::stdin;
 
 fn main() {
-    let version = "0.0.4";
+    let version = "0.0.5";
 
     let mut try_counter = 0;
 
